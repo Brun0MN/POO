@@ -12,16 +12,15 @@ public class Contato {
 
     //metodos
 
-    public boolean Pessoa(String n, String s){
+    public void Pessoa(String n, String s){
         this.nome = n;
         this.sobrenome = s;
     }
 
-    public boolean addTelefone(String r, String n){
+    public void addTelefone(String r, String n){
 
 
     }
-
 
 
 }

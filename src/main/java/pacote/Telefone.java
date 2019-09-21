@@ -11,15 +11,13 @@ public class Telefone {
 
     // metodos
 
-    public boolean Telefone(){
+    public void Telefone(){
 
     }
 
-    public boolean add(String r, String n){
+    public void add(String r, String n){
 
     }
-
-
 
 
 
