@@ -1,13 +1,16 @@
 package pacote;
 
+import java.time.LocalDate;
+
 public class Contato {
 
     //atributos
 
     private String nome;
     private String sobrenome;
-    private String Telefone;
-    private String Email;
+    private LocalDate dataNasc;
+    private Telefone telefone;
+    private Email email
 
 
     //metodos
