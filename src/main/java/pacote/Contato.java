@@ -1,18 +1,15 @@
 package pacote;
 
-import javax.swing.text.DateFormatter;
 import javax.swing.text.MaskFormatter;
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class Contato {
 
     //atributos
 
-    private String nome;
-    private String sobrenome;
+    public String nome;
+    public String sobrenome;
     private LocalDate dataNasc;
     private Telefone telefone;
     private Email email;
