@@ -12,7 +12,7 @@ public class Contato {
     public String nome;
     public String sobrenome;
     private LocalDate dataNasc;
-    private Telefone telefone;
+    public Telefone telefone;
     private Email email;
 
 

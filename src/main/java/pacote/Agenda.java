@@ -28,7 +28,7 @@ public class Agenda {
     public void removeContato(String n, String s){
         for(Contato co: l){
             System.out.println("Contato: " + co.nome);
-            if(co.nome.equals(n) && co.sobrenome.equals(s)){
+            if((co.nome.equals(n)) && (co.sobrenome.equals(s))){
                 l.remove(co);
                 System.out.println("Contato removido!");
                 return;
@@ -104,7 +104,14 @@ public class Agenda {
         }
     }
 
+    public void listarContatos(){
+        System.out.println("LISTANDO:");
+        for(Contato c : l){ // percorrendo um ArrayList
+            System.out.println(c.nome);
+        }
 
+
+    }
 
 
 }

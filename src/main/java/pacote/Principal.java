@@ -174,6 +174,10 @@ public class Principal {
                     a.removeEmail(rotu, indic);
                     break;
 
+
+                case "9":
+                    a.listarContatos();
+                    break;
             }
 
         }
