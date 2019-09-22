@@ -3,6 +3,7 @@ package pacote;
 import javax.swing.text.MaskFormatter;
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Contato {
 
@@ -20,18 +21,27 @@ public class Contato {
 
 
     public String formata(String mascara, String valor){
-        MaskFormatter mask = null;
+        Scanner teclado = new Scanner(System.in);
         String resultado = "";
-        try {
-            mask = new MaskFormatter(mascara);
-         //   mask.setValueContainsLiteralCharacters(false);
-            resultado = mask.valueToString(valor);
-        }
+        while (resultado == "") {
+            MaskFormatter mask = null;
 
-        catch (ParseException e) {
-            e.printStackTrace();
+            try {
+                mask = new MaskFormatter(mascara);
+                //   mask.setValueContainsLiteralCharacters(false);
+                resultado = mask.valueToString(valor);
+            } catch (ParseException e) {
+                e.printStackTrace();
+
+                System.out.println("Ocorreu um erro!");
+                System.out.println("Entrada '" + valor + "' invalida!");
+
+                System.out.println("Digite novamente a entrada!");
+                valor = teclado.nextLine();
+            }
         }
-        return resultado;
+            return resultado;
+
     }
 
 
@@ -56,6 +66,7 @@ public class Contato {
         this.dataNasc = LocalDate.of(ano, mes, dia);
 
     }
+
 
     public void addTelefone(String r, String n){
         Telefone t = new Telefone();

@@ -4,6 +4,7 @@ import javax.swing.text.MaskFormatter;
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Email {
 
@@ -17,15 +18,21 @@ public class Email {
 
 
     public String formata(String valor){
+        Scanner teclado = new Scanner(System.in);
         MaskFormatter mask = null;
         String resultado = "";
-        try {
-            mask = new MaskFormatter("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$");
-            resultado = mask.valueToString(valor);
-        }
+        while(resultado == "") {
+            try {
+                mask = new MaskFormatter("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$");
+                resultado = mask.valueToString(valor);
+            } catch (ParseException e) {
+                e.printStackTrace();
 
-        catch (ParseException e) {
-            e.printStackTrace();
+                System.out.println("Ocorreu um erro!");
+                System.out.println("Entrada '" + valor + "' invalida!");
+                System.out.println("Digite novamente a entrada!");
+                valor = teclado.nextLine();
+            }
         }
         return resultado;
     }

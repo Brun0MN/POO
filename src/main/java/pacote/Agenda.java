@@ -18,15 +18,23 @@ public class Agenda {
     public void addContato(Contato c){
        // if(l.contains(c) == false) l.add(c);
         l.add(c);
+
+        System.out.println("LISTANDO:");
+        for(Contato p : l){ // percorrendo um ArrayList
+             System.out.println(p.nome.toString());
+        }
     }
 
     public void removeContato(String n, String s){
         for(Contato co: l){
+            System.out.println("Contato: " + co.nome);
             if(co.nome.equals(n) && co.sobrenome.equals(s)){
                 l.remove(co);
-                break;
+                System.out.println("Contato removido!");
+                return;
             }
         }
+        System.out.println("Nenhum contato encontrado!");
     }
 
 
