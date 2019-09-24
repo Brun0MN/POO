@@ -21,18 +21,19 @@ public class Agenda {
 
         System.out.println("LISTANDO:");
         for(Contato p : l){ // percorrendo um ArrayList
-             System.out.println(p.nome.toString());
+             System.out.println(p.getNome().toString());
         }
     }
 
     public void removeContato(String n, String s){
         for(Contato co: l){
-            System.out.println("Contato: " + co.nome);
-            if((co.nome.equals(n)) && (co.sobrenome.equals(s))){
+            System.out.println("Contato: " + co.getNome());
+            if((co.getNome().equals(n)) && (co.getSobrenome().equals(s))){
                 l.remove(co);
                 System.out.println("Contato removido!");
                 return;
             }
+
         }
         System.out.println("Nenhum contato encontrado!");
     }
@@ -107,7 +108,7 @@ public class Agenda {
     public void listarContatos(){
         System.out.println("LISTANDO:");
         for(Contato c : l){ // percorrendo um ArrayList
-            System.out.println(c.nome);
+            System.out.println(c.getNome());
         }
 
 

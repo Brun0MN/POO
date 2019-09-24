@@ -23,7 +23,7 @@ public class Email {
         String resultado = "";
         while(resultado == "") {
             try {
-                mask = new MaskFormatter("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$");
+                mask = new MaskFormatter("^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$");  //MUDAR ISSO
                 resultado = mask.valueToString(valor);
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -46,6 +46,7 @@ public class Email {
     }
 
     public void remove(String r){
+
         dados.remove(r);
     }
 
