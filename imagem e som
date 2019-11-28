@@ -1,0 +1,43 @@
+
+
+AUDIO
+
+res
+ new
+  Andoid Resource Directory   -> (directory name -> raw)
+
+
+ctrl + c, ctrl + v na pasta raw
+
+
+
+
+
+IMAGEM
+
+res
+ new
+   Vector Asset
+
+a imagem vai pra pasta drawble
+
+
+
+se usar o Asset image pro iconee mudar o nome tem que mudar o 
+AndroidManifest.xml
+	android:icon = "..."
+	android:roundIcon = "..."
+
+
+
+
+
+Draw.io
+
+ativar
+	Androi
+	Materia design
+
+
+
+fazer qual botao leva pra qual tela
